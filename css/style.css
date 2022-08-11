@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/raleway-variablefont_wght-webfont.woff') format('woff'),
+        url('/fonts/raleway-variablefont_wght-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/roboto-black-webfont.woff') format('woff'),
+        url('/fonts/raleway-variablefont_wght-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url('/fonts/opensans-variablefont_wdthwght-webfont.woff') format('woff'),
+        url('/fonts/opensans-variablefont_wdthwght-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.pseudo-header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border-bottom: #FFCC00 solid;*/
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+}
+
+.subtitle {
+    font-family: 'Raleway';
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #898F8F;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFCC00;
+}
+
+hr {
+    width: 105px;
+    border: #FFCC00 1px solid;
+}
+
+.icon-decor {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        --b: 1px;   
+        --c: #FFCC00;   
+        --w: 60px;  
+        padding: var(--b); 
+        position:relative; 
+        width:310px;
+        height:430px;
+        margin:5px;
+
+}
+
+.container::before {
+    content :"";
+    position: absolute;
+    inset: 0;
+    background: var(--c,#FFCC00);
+    --_g: #0000 90deg,#000 0;
+    --_p: var(--w) var(--w) no-repeat;
+    --mask:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #666666;
+}
+
+.small-line {
+    width: 100px;
+    border: #FFCC00 1px solid;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #666666;
+
+}
+
+.icon-link {
+    width: 30px;
+    height: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: table;
+}
+
+li:not(:last-child) {
+    margin-right: 5px;
+}
+
+p {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;  
+    text-align: center;
+    color: #333333;
+}
+
+.decor {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.decor-divider {
+    width: 10px;
+    border: #FFCC00 1px solid;
+    margin: 0 5px;
+}
+
+.decor-divider:nth-child(2){
+    width: 20px;
+}
+
+button {
+    border: #FFCC00 1px solid;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666666;
+    padding: 5px 10px;
+    background-color: #FFF;
+}
+
+@media screen and (min-width: 1024px){
+    hr {
+        width: 140px;
+    }
+
+    .main {
+        display: flex;
+    }
+
+    .aside {
+        margin-top: 65px;
+        width: 50%;
+        border-right: 1px solid #FFCC00;
+    }
+    
+    .descr {
+        
+        width: 50%;
+    }
+
+    .content {
+        margin: 70px 85px;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin-bottom: 30px;
+    }
+}
